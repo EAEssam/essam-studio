@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="author" content="Essam" />
+    <meta property="og:site_name" content="Essam" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://eaessam.github.io/essam-studio/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Essam — sites web qualitatifs, rapides, conformes" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/essam-studio/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/essam-studio/apple-touch-icon.png" />
+    <link rel="preload" href="/essam-studio/fonts/cormorant-300-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/essam-studio/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      // Avant tout rendu : signale que le JS tourne et applique la préférence « animations réduites ».
+      (function (d) {
+        var h = d.documentElement; h.classList.add('js');
+        try {
+          if (localStorage.getItem('essam:motion') === 'reduce' || matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('reduce');
+          // Arrivée depuis une autre page du site : le rideau de transition se lève.
+          if (sessionStorage.getItem('essam:nav')) { h.classList.add('from-nav'); sessionStorage.removeItem('essam:nav'); }
+        } catch (e) {}
+        // Filet de sécurité : si le JS principal ne démarre pas, tout le contenu reste visible.
+        setTimeout(function () { if (!window.__essam) h.classList.add('anim-fail'); }, 3500);
+      })(document);
+    </script>
+
+    <script>
+      // Intro « ESSAM » : une seule fois par visite, jamais en animations réduites ni en revenant d'une autre page.
+      // window.__intro se résout quand le rideau commence à se lever : l'accueil démarre alors son entrée.
+      (function (d, w) {
+        var h = d.documentElement, lift;
+        w.__intro = new Promise(function (r) { lift = r; });
+        var seen = false;
+        try { seen = !!sessionStorage.getItem('essam:intro'); sessionStorage.setItem('essam:intro', '1'); } catch (e) {}
+        if (seen || h.classList.contains('reduce') || h.classList.contains('from-nav')) { lift(); return; }
+        h.classList.add('is-intro');
+        var go = function () { if (h.classList.contains('intro-go')) return; h.classList.add('intro-go'); t = setTimeout(lift, 2150); };
+        var t;
+        // Le prénom ne s'écrit qu'avec sa vraie police (préchargée) : jamais de police de secours à l'écran.
+        (d.fonts && d.fonts.load ? d.fonts.load('300 1em "Cormorant Garamond"') : Promise.resolve()).then(go, go);
+        setTimeout(go, 500);
+        var skip = function () {
+          if (!h.classList.contains('is-intro') || h.classList.contains('intro-skip')) return;
+          h.classList.add('intro-go', 'intro-skip'); clearTimeout(t); lift();
+        };
+        ['pointerdown', 'keydown', 'wheel', 'touchstart'].forEach(function (ev) { w.addEventListener(ev, skip, { passive: true, once: true }); });
+        d.addEventListener('animationend', function (e) {
+          if (e.animationName === 'intro-out') h.classList.remove('is-intro', 'intro-go', 'intro-skip');
+        });
+      })(document, window);
+    </script>
+    <title>Essam — Sites web qualitatifs et interactifs, livrés en 3 jours</title>
+    <meta name="description" content="Essam crée des sites qualitatifs, interactifs, rapides et conformes pour les entreprises, commerces et indépendants. Composez le vôtre dans l'Atelier. Livré en 3 jours ouvrés, appel et devis gratuits." />
+    <link rel="canonical" href="https://eaessam.github.io/essam-studio/" />
+    <meta property="og:title" content="Essam — Votre site est votre premier vendeur" />
+    <meta property="og:description" content="Des sites qualitatifs, rapides, conformes. Livrés en 3 jours ouvrés." />
+    <meta property="og:url" content="https://eaessam.github.io/essam-studio/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Essam",
+        "description": "Création de sites web qualitatifs, rapides et conformes : sites vitrines, landing pages, refontes et boutiques Shopify. Livraison en 3 jours ouvrés.",
+        "url": "https://eaessam.github.io/essam-studio/",
+        "image": "https://eaessam.github.io/essam-studio/og.jpg",
+        "logo": "https://eaessam.github.io/essam-studio/apple-touch-icon.png",
+        "email": "amsimnaessam@gmail.com",
+        "areaServed": { "@type": "Country", "name": "France" },
+        "availableLanguage": "fr",
+        "priceRange": "690 € – 2 490 €",
+        "sameAs": ["https://www.instagram.com/ea.essam/"],
+        "makesOffer": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Création de site vitrine" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Création de boutique Shopify" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Refonte de site web" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maintenance de site web" }, "price": "80", "priceCurrency": "EUR", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "80", "priceCurrency": "EUR", "unitText": "MONTH" } }
+        ]
+      }
+    </script>
+    <script type="module" crossorigin src="/essam-studio/assets/index-DyIcza9z.js"></script>
+    <link rel="modulepreload" crossorigin href="/essam-studio/assets/main-DxUbbfBF.js">
+    <link rel="modulepreload" crossorigin href="/essam-studio/assets/atelier-SFMcNfy8.js">
+    <link rel="stylesheet" crossorigin href="/essam-studio/assets/main-7rruMuZH.css">
+  </head>
+  <body class="page-home">
+    <div class="intro" aria-hidden="true" data-intro>
+      <div class="intro__inner">
+        <p class="intro__name"><span>E</span><span>S</span><span>S</span><span>A</span><span>M</span></p>
+        <span class="intro__filet"></span>
+        <p class="intro__sub">Créateur de sites web <b>N°05</b></p>
+      </div>
+    </div>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header" data-header>
+      <div class="site-header__inner">
+        <a class="logo" href="/essam-studio/" aria-label="Essam, retour à l'accueil" data-cursor="hover"><svg class="logo__mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+  <path class="logo__seams" d="M16 4V28 M4 16H28 M8.6 6.4C12.4 10.8 12.4 21.2 8.6 25.6 M23.4 6.4C19.6 10.8 19.6 21.2 23.4 25.6" />
+  <circle class="logo__ball" cx="16" cy="16" r="12" />
+</svg><span class="logo__word">ESSAM</span><span class="logo__num" aria-hidden="true">05</span>
+</a>
+        <nav class="nav" aria-label="Navigation principale">
+          <ul class="nav__list">
+            <li><a class="nav__link" data-nav="realisations" href="/essam-studio/realisations">Réalisations</a></li>
+            <li><a class="nav__link" data-nav="prestations" href="/essam-studio/prestations">Prestations</a></li>
+            <li><a class="nav__link" data-nav="methode" href="/essam-studio/methode">Méthode</a></li>
+            <li><a class="nav__link" data-nav="contact" href="/essam-studio/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn--primary btn--sm site-header__cta" href="/essam-studio/contact#rdv" data-booking data-track="cta_rdv" data-track-label="header" data-magnetic>
+          <span class="btn__label">Réserver mon appel gratuit</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-menu-toggle>
+          <span class="menu-toggle__lines" aria-hidden="true"></span>
+          <span class="visually-hidden">Ouvrir le menu</span>
+        </button>
+      </div>
+    </header>
+    <div class="menu-mobile" id="menu-mobile" data-menu hidden>
+      <nav aria-label="Navigation mobile">
+        <ul class="menu-mobile__list">
+          <li><a href="/essam-studio/">Accueil</a></li>
+          <li><a data-nav="realisations" href="/essam-studio/realisations">Réalisations</a></li>
+          <li><a data-nav="prestations" href="/essam-studio/prestations">Prestations</a></li>
+          <li><a data-nav="methode" href="/essam-studio/methode">Méthode</a></li>
+          <li><a data-nav="contact" href="/essam-studio/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-mobile__foot">
+        <a class="btn btn--primary" href="/essam-studio/contact#rdv" data-booking data-track="cta_rdv" data-track-label="menu">
+          <span class="btn__label">Réserver mon appel gratuit (15 min)</span>
+        </a>
+        <a class="link" href="https://ig.me/m/ea.essam" target="_blank" rel="noopener" data-track="instagram_click" data-track-label="menu">M'écrire sur Instagram</a>
+      </div>
+    </div>
+
+    <main id="contenu">
+      <!-- 1. HERO — le ballon vivant -->
+      <section class="hero" aria-labelledby="hero-titre" data-hero data-thread-start>
+        <div class="hero__stage" data-ball-stage>
+          <svg class="hero__court" viewBox="0 0 800 600" aria-hidden="true">
+            <path class="draw" d="M110 600V430A290 290 0 0 1 690 430V600" />
+            <path class="draw" d="M310 600V380H490V600" />
+            <circle class="draw" cx="400" cy="380" r="90" />
+            <circle class="draw" cx="400" cy="560" r="14" />
+            <path class="draw" d="M360 590H440" />
+          </svg>
+          <div class="hero__fallback" aria-hidden="true" data-ball-fallback>
+            <div class="css-ball">
+              <svg viewBox="0 0 100 100"><path d="M50 2V98 M2 50H98 M18 12C30 28 30 72 18 88 M82 12C70 28 70 72 82 88" /></svg>
+            </div>
+          </div>
+        </div>
+        <div class="hero__filet filet" aria-hidden="true"></div>
+        <div class="container hero__inner">
+          <p class="eyebrow hero__eyebrow" data-hero-in>Essam · Créateur de sites web</p>
+          <h1 class="display hero__title" id="hero-titre">
+            <span class="hero__line" data-hero-line>Un site qu'on ne lit pas.</span>
+            <em class="hero__line" data-hero-line>On le joue.</em>
+          </h1>
+          <p class="lead hero__lead" data-hero-in>Sites vitrines et boutiques qualitatifs, rapides, conformes. Livrés en 3&nbsp;jours ouvrés.</p>
+          <div class="hero__actions" data-hero-in>
+            <a class="btn btn--primary btn--lg hero__cta" href="/essam-studio/contact#rdv" data-booking data-track="cta_rdv" data-track-label="hero" data-magnetic data-hero-cta>
+              <span class="btn__label">Réserver mon appel gratuit (15 min)</span>
+            </a>
+            <a class="link link--arrow" href="#atelier" data-track="cta_atelier" data-track-label="hero">Composer mon site</a>
+          </div>
+        </div>
+        <button class="hero__hint" type="button" data-ball-throw data-hero-in data-thread>
+          <span class="hero__hint-dot" aria-hidden="true"></span>
+          <span class="hero__hint-fine">Attrapez le ballon. Lancez-le.</span>
+          <span class="hero__hint-coarse">Lancez le ballon.</span>
+        </button>
+      </section>
+
+      <!-- 2. LE PROBLÈME EN UN MOUVEMENT -->
+      <section class="kinetic" aria-labelledby="kinetic-titre" data-kinetic>
+        <div class="kinetic__pin">
+          <h2 class="visually-hidden" id="kinetic-titre">Ce qui fait fuir vos clients</h2>
+          <p class="kinetic__kicker" aria-hidden="true" data-kinetic-kicker>Ce qui fait fuir vos clients</p>
+          <ul class="kinetic__stack">
+            <li class="kinetic__item" data-kinetic-item><span class="display">Pas de site.</span><i class="kinetic__slash" aria-hidden="true"></i></li>
+            <li class="kinetic__item" data-kinetic-item><span class="display">Un site daté.</span><i class="kinetic__slash" aria-hidden="true"></i></li>
+            <li class="kinetic__item" data-kinetic-item><span class="display">Un site qui ne vend pas.</span><i class="kinetic__slash" aria-hidden="true"></i></li>
+            <li class="kinetic__item" data-kinetic-item><span class="display">Introuvable sur Google.</span><i class="kinetic__slash" aria-hidden="true"></i></li>
+          </ul>
+          <p class="kinetic__turn" data-kinetic-turn>
+            <span class="h2">Votre site est votre premier vendeur.</span>
+            <em class="h2">Faisons-le jouer pour vous.</em>
+          </p>
+        </div>
+      </section>
+
+      <!-- 3. L'ATELIER -->
+      <section class="atelier section" id="atelier" aria-labelledby="atelier-titre" data-atelier data-hide-sticky>
+        <div class="container">
+          <header class="atelier__head">
+            <p class="eyebrow">L'Atelier</p>
+            <h2 class="h1" id="atelier-titre" data-split>Construisez votre site. <em>Maintenant.</em></h2>
+            <p class="lead">Trois choix. L'aperçu se transforme à chaque geste.</p>
+          </header>
+
+          <div class="atelier__grid">
+            <!-- Aperçu live -->
+            <div class="atelier__stage" aria-live="polite" aria-atomic="false">
+              <div class="pv-frame">
+                <div class="pv-frame__bar" aria-hidden="true"><i></i><i></i><i></i><b data-pv-url>votre-marque.fr</b></div>
+                <div class="pv" data-pv data-type="vitrine" data-mood="nuit" aria-hidden="true">
+                  <div class="pv__nav"><span class="pv__logo">Votre<em>Marque</em></span><span class="pv__links"><i></i><i></i><i></i></span><span class="pv__cart" data-pv-only="shopify">Panier · 2</span></div>
+                  <div class="pv__hero">
+                    <span class="pv__kicker" data-pv-kicker>Votre activité</span>
+                    <span class="pv__title" data-pv-title>Ce que vous faites,<br /><em>en mieux.</em></span>
+                    <span class="pv__btn" data-pv-btn>Prendre rendez-vous</span>
+                  </div>
+                  <div class="pv__block pv__services" data-pv-only="vitrine refonte"><span></span><span></span><span></span></div>
+                  <div class="pv__block pv__shop" data-pv-only="shopify"><span><b></b>Produit</span><span><b></b>Produit</span><span><b></b>Produit</span></div>
+                  <div class="pv__block pv__form" data-pv-only="landing"><span></span><span></span><b>Je réserve</b></div>
+                  <div class="pv__stamp" data-pv-only="refonte"><span>Ancien site</span><span>Nouveau site</span></div>
+                  <div class="pv__legal" data-pv-opt="legal"><span>Mentions légales</span><span>Confidentialité</span><span>Cookies</span></div>
+                  <div class="pv__cookie" data-pv-opt="legal"><span>Cookies ?</span><b>Refuser</b><b>Accepter</b></div>
+                </div>
+                <span class="pv-badge" data-pv-opt="maint">Suivi · 80 €/mois</span>
+              </div>
+              <div class="pv-serp" data-pv-opt="seo" aria-hidden="true">
+                <span class="pv-serp__url">votre-marque.fr › accueil</span>
+                <span class="pv-serp__title">Votre Marque — Votre activité, en mieux</span>
+                <span class="pv-serp__desc">Ce que vous faites, présenté clairement. Réservez en ligne en deux clics.</span>
+              </div>
+
+              <dl class="gauges" data-gauges>
+                <div class="gauge" data-gauge="design"><dt>Design</dt><dd><span class="gauge__bar"><i></i><i></i><i></i></span><span class="gauge__lvl">Standard</span></dd></div>
+                <div class="gauge" data-gauge="speed"><dt>Rapidité</dt><dd><span class="gauge__bar"><i></i><i></i><i></i></span><span class="gauge__lvl">Standard</span></dd></div>
+                <div class="gauge" data-gauge="seo"><dt>Visibilité</dt><dd><span class="gauge__bar"><i></i><i></i><i></i></span><span class="gauge__lvl">Standard</span></dd></div>
+                <div class="gauge" data-gauge="legal"><dt>Conformité</dt><dd><span class="gauge__bar"><i></i><i></i><i></i></span><span class="gauge__lvl">Standard</span></dd></div>
+              </dl>
+              <p class="atelier__tier">Niveau de prestation&nbsp;: <b data-tier>Standard</b></p>
+            </div>
+
+            <!-- Choix -->
+            <form class="atelier__controls" data-atelier-form aria-label="Composer votre site">
+              <fieldset class="step">
+                <legend class="step__title"><span>01</span> Le type de site</legend>
+                <div class="choices choices--4">
+                  <label class="choice"><input type="radio" name="type" value="vitrine" checked /><span class="choice__body"><b>Site vitrine</b><small>Présenter, convaincre</small></span></label>
+                  <label class="choice"><input type="radio" name="type" value="shopify" /><span class="choice__body"><b>Boutique Shopify</b><small>Vendre en ligne</small></span></label>
+                  <label class="choice"><input type="radio" name="type" value="landing" /><span class="choice__body"><b>Landing page</b><small>Une offre, une action</small></span></label>
+                  <label class="choice"><input type="radio" name="type" value="refonte" /><span class="choice__body"><b>Refonte</b><small>Repartir du bon pied</small></span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="step">
+                <legend class="step__title"><span>02</span> L'ambiance</legend>
+                <div class="choices choices--3">
+                  <label class="choice choice--mood" style="--m1:#0a0a0b;--m2:#c9a66b"><input type="radio" name="mood" value="nuit" checked /><span class="choice__body"><i class="choice__swatch" aria-hidden="true"></i><b>Nuit dorée</b><small>Sombre, précieux</small></span></label>
+                  <label class="choice choice--mood" style="--m1:#efe9df;--m2:#2b2824"><input type="radio" name="mood" value="lin" /><span class="choice__body"><i class="choice__swatch" aria-hidden="true"></i><b>Lin clair</b><small>Doux, naturel</small></span></label>
+                  <label class="choice choice--mood" style="--m1:#140d09;--m2:#e2672f"><input type="radio" name="mood" value="braise" /><span class="choice__body"><i class="choice__swatch" aria-hidden="true"></i><b>Braise</b><small>Chaud, généreux</small></span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="step">
+                <legend class="step__title"><span>03</span> Les options</legend>
+                <div class="choices choices--opts">
+                  <label class="choice choice--opt"><input type="checkbox" name="opt" value="anim" /><span class="choice__body"><b>Animations avancées</b><small>Mouvement, 3D, interactions</small></span></label>
+                  <label class="choice choice--opt"><input type="checkbox" name="opt" value="seo" /><span class="choice__body"><b>Référencement</b><small>Être trouvé sur Google</small></span></label>
+                  <label class="choice choice--opt"><input type="checkbox" name="opt" value="legal" checked /><span class="choice__body"><b>Conformité légale</b><small>Mentions, RGPD, cookies</small></span></label>
+                  <label class="choice choice--opt"><input type="checkbox" name="opt" value="maint" /><span class="choice__body"><b>Maintenance</b><small>80&nbsp;€/mois, optionnelle</small></span></label>
+                </div>
+              </fieldset>
+
+              <div class="atelier__gauges-slot" data-gauges-slot hidden></div>
+              <div class="atelier__recap" data-thread>
+                <div class="pcard pcard--you">
+                  <div class="pcard__top"><span>Votre fiche</span><span class="pcard__sig">Composée avec le N°05</span></div>
+                  <p class="atelier__summary" data-atelier-summary>Site vitrine · Nuit dorée · Conformité légale</p>
+                </div>
+                <a class="btn btn--primary btn--lg" href="/essam-studio/contact#devis" data-atelier-cta data-track="cta_devis" data-track-label="atelier" data-magnetic>
+                  <span class="btn__label">Demander mon devis gratuit</span>
+                </a>
+                <p class="atelier__note small muted">Sur devis, sans engagement. Les niveaux décrivent la prestation choisie, pas un résultat.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- 4. RÉALISATIONS : aperçu, la suite sur /realisations -->
+      <section class="works works--compact section" id="realisations" aria-label="Réalisations">
+        <div class="container works__cta" data-reveal>
+          <a class="btn btn--ghost btn--lg" href="/essam-studio/realisations" data-track="cta_realisations" data-track-label="bouton" data-magnetic>
+            <span class="btn__label">Voir les preuves</span><span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+
+      <!-- 5. PROCESS -->
+      <section class="ba section" aria-labelledby="ba-titre" data-ba>
+        <div class="container">
+          <header class="ba__head">
+            <p class="eyebrow">Process</p>
+            <h2 class="h2" id="ba-titre" data-split>Trois étapes. <em>C'est tout.</em></h2>
+          </header>
+
+          <ol class="steps" data-steps>
+            <li class="steps__item"><span class="steps__num">01</span><b>Appel gratuit</b><span>15 minutes pour cerner votre projet.</span></li>
+            <li class="steps__item"><span class="steps__num">02</span><b>Devis sur mesure</b><span>Un prix clair, gratuit, sans engagement.</span></li>
+            <li class="steps__item"><span class="steps__num">03</span><b>Livraison</b><span>En 3 jours ouvrés, en ligne et conforme.</span></li>
+            <svg class="steps__line" viewBox="0 0 1000 2" preserveAspectRatio="none" aria-hidden="true"><path d="M0 1H1000" /></svg>
+          </ol>
+          <p class="steps__note small muted">Le délai court dès la validation du devis et la réception de vos contenus. <button type="button" class="egg" data-egg="home" aria-label="Petit ballon caché"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" /><path d="M50 6V94 M6 50H94 M20 15C31 30 31 70 20 85 M80 15C69 30 69 70 80 85" /></svg></button></p>
+        </div>
+      </section>
+
+    </main>
+    <section class="cta-final" aria-labelledby="cta-final-titre" data-cta-final>
+      <div class="container cta-final__inner">
+        <div class="hoop" data-hoop data-thread>
+          <svg class="hoop__art" viewBox="0 0 240 200" aria-hidden="true">
+            <path class="hoop__board" d="M60 10H180V86H60Z M100 38H140V70H100Z" />
+            <path class="hoop__net" data-hoop-net d="M84 92 L92 150 M100 92 L104 152 M120 92 L120 154 M140 92 L136 152 M156 92 L148 150 M88 112 H152 M92 132 H148 M96 150 H144" />
+            <ellipse class="hoop__rim" cx="120" cy="92" rx="38" ry="7" />
+          </svg>
+          <span class="hoop__ball" data-hoop-ball aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" /><path d="M50 3V97 M3 50H97 M18 12C30 28 30 72 18 88 M82 12C70 28 70 72 82 88" /></svg></span>
+          <p class="hoop__score" data-hoop-score role="status" aria-live="polite"></p>
+        </div>
+        <p class="eyebrow">N°05, mon numéro de maillot · Le panier, c'est ici</p>
+        <h2 class="display cta-final__title" id="cta-final-titre" data-split>
+          Votre prochain client vous cherche déjà.<br /><em>Qu'il vous trouve.</em>
+        </h2>
+        <div class="cta-final__actions">
+          <a class="btn btn--primary btn--lg" href="/essam-studio/contact#rdv" data-booking data-track="cta_rdv" data-track-label="cta-final" data-magnetic data-hoop-target>
+            <span class="btn__label">Réserver mon appel gratuit (15 min)</span>
+          </a>
+          <a class="btn btn--ghost" href="/essam-studio/contact#devis" data-track="cta_devis" data-track-label="cta-final" data-magnetic>
+            <span class="btn__label">Demander mon devis gratuit</span>
+          </a>
+          <button class="link hoop__try" type="button" data-hoop-shoot>Tenter le panier</button>
+        </div>
+        <p class="cta-final__legal">Conforme dès le premier jour&nbsp;: mentions légales, RGPD, cookies, accessibilité pris en charge. <a href="/essam-studio/legal">Voir ma page Légal</a></p>
+        <p class="cta-final__contact"><a href="mailto:amsimnaessam@gmail.com" data-track="email_click">amsimnaessam@gmail.com</a><span aria-hidden="true">·</span><a href="https://ig.me/m/ea.essam" target="_blank" rel="noopener" data-track="instagram_click" data-track-label="cta-final">@ea.essam sur Instagram</a></p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="logo logo--lg" href="/essam-studio/" aria-label="Essam, retour à l'accueil"><svg class="logo__mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+  <path class="logo__seams" d="M16 4V28 M4 16H28 M8.6 6.4C12.4 10.8 12.4 21.2 8.6 25.6 M23.4 6.4C19.6 10.8 19.6 21.2 23.4 25.6" />
+  <circle class="logo__ball" cx="16" cy="16" r="12" />
+</svg><span class="logo__word">ESSAM</span><span class="logo__num" aria-hidden="true">05</span>
+</a>
+          <p>Création de sites web qualitatifs.<br />Pour les entreprises, commerces et indépendants.</p>
+        </div>
+        <nav class="site-footer__col" aria-label="Pages">
+          <p class="site-footer__title">Pages</p>
+          <ul>
+            <li><a href="/essam-studio/realisations">Réalisations</a></li>
+            <li><a href="/essam-studio/prestations">Prestations</a></li>
+            <li><a href="/essam-studio/methode">Méthode</a></li>
+            <li><a href="/essam-studio/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__col">
+          <p class="site-footer__title">Contact</p>
+          <ul>
+            <li><a href="mailto:amsimnaessam@gmail.com" data-track="email_click">amsimnaessam@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/ea.essam/" target="_blank" rel="noopener" data-track="instagram_click" data-track-label="footer">Instagram · @ea.essam</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__title">Légal &amp; réglages</p>
+          <ul>
+            <li><a href="/essam-studio/legal#mentions">Mentions légales</a></li>
+            <li><a href="/essam-studio/legal#confidentialite">Confidentialité</a></li>
+            <li><a href="/essam-studio/legal#cgp">Conditions de prestation</a></li>
+            <li><button class="footer-btn" type="button" data-consent-open>Gérer les cookies</button></li>
+            <li><button class="footer-btn" type="button" data-motion-toggle aria-pressed="false">Réduire les animations</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container site-footer__base">
+        <p>© <span data-year>2026</span> Essam · Micro-entreprise</p>
+        <p class="egg-count" data-egg-count hidden></p>
+        <p class="site-footer__made">Conçu et codé à la main<span class="num-explain"> par le N°05</span>. Aucun modèle.</p>
+      </div>
+    </footer>
+
+    <a class="sticky-cta" href="/essam-studio/contact#rdv" data-booking data-sticky-cta data-track="cta_rdv" data-track-label="sticky">
+      <span class="sticky-cta__dot" aria-hidden="true"></span>
+      <span>Appel gratuit · 15 min</span>
+    </a>
+
+    <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false" aria-label="Activer le son">
+      <span class="sound-toggle__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="sound-toggle__label">Son</span>
+    </button>
+
+    <div class="consent" role="dialog" aria-modal="false" aria-labelledby="consent-titre" aria-describedby="consent-texte" data-consent hidden>
+      <p class="consent__title" id="consent-titre">Cookies de mesure d'audience</p>
+      <p class="consent__text" id="consent-texte">
+        Avec votre accord, j'utilise Google Analytics et Microsoft Clarity pour comprendre comment le site est utilisé et l'améliorer.
+        Rien n'est déposé si vous refusez. Vous pouvez changer d'avis à tout moment depuis le pied de page.
+        <a href="/essam-studio/legal#cookies">En savoir plus</a>
+      </p>
+      <div class="consent__actions">
+        <button class="btn btn--ghost btn--sm" type="button" data-consent-choice="refuse">Refuser</button>
+        <button class="btn btn--ghost btn--sm" type="button" data-consent-choice="accept">Accepter</button>
+      </div>
+    </div>
+
+    <div class="curtain" aria-hidden="true" data-curtain><span class="curtain__line"></span></div>
+    <div class="cursor is-hidden" aria-hidden="true" data-cursor-el><span class="cursor__dot"></span><span class="cursor__ring"><span class="cursor__label"></span></span></div>
+
+  </body>
+</html>

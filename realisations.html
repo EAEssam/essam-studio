@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="author" content="Essam" />
+    <meta property="og:site_name" content="Essam" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://eaessam.github.io/essam-studio/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Essam — sites web qualitatifs, rapides, conformes" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/essam-studio/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/essam-studio/apple-touch-icon.png" />
+    <link rel="preload" href="/essam-studio/fonts/cormorant-300-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/essam-studio/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      // Avant tout rendu : signale que le JS tourne et applique la préférence « animations réduites ».
+      (function (d) {
+        var h = d.documentElement; h.classList.add('js');
+        try {
+          if (localStorage.getItem('essam:motion') === 'reduce' || matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('reduce');
+          // Arrivée depuis une autre page du site : le rideau de transition se lève.
+          if (sessionStorage.getItem('essam:nav')) { h.classList.add('from-nav'); sessionStorage.removeItem('essam:nav'); }
+        } catch (e) {}
+        // Filet de sécurité : si le JS principal ne démarre pas, tout le contenu reste visible.
+        setTimeout(function () { if (!window.__essam) h.classList.add('anim-fail'); }, 3500);
+      })(document);
+    </script>
+
+    <title>Réalisations — Essam, création de sites web</title>
+    <meta name="description" content="Café Nova, site vitrine d'un café de spécialité à Besançon, et trois projets conceptuels : un restaurant, un commerce, un bureau de tabac-presse. Démos interactives." />
+    <link rel="canonical" href="https://eaessam.github.io/essam-studio/realisations" />
+    <meta property="og:title" content="Réalisations — Essam" />
+    <meta property="og:description" content="Un client réel. Trois projets conceptuels. Tous au même niveau d'exigence." />
+    <meta property="og:url" content="https://eaessam.github.io/essam-studio/realisations" />
+    <script type="module" crossorigin src="/essam-studio/assets/realisations-ptDTiD70.js"></script>
+    <link rel="modulepreload" crossorigin href="/essam-studio/assets/main-DxUbbfBF.js">
+    <link rel="stylesheet" crossorigin href="/essam-studio/assets/main-7rruMuZH.css">
+  </head>
+  <body class="page-work">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header" data-header>
+      <div class="site-header__inner">
+        <a class="logo" href="/essam-studio/" aria-label="Essam, retour à l'accueil" data-cursor="hover"><svg class="logo__mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+  <path class="logo__seams" d="M16 4V28 M4 16H28 M8.6 6.4C12.4 10.8 12.4 21.2 8.6 25.6 M23.4 6.4C19.6 10.8 19.6 21.2 23.4 25.6" />
+  <circle class="logo__ball" cx="16" cy="16" r="12" />
+</svg><span class="logo__word">ESSAM</span><span class="logo__num" aria-hidden="true">05</span>
+</a>
+        <nav class="nav" aria-label="Navigation principale">
+          <ul class="nav__list">
+            <li><a class="nav__link" data-nav="realisations" aria-current="page" href="/essam-studio/realisations">Réalisations</a></li>
+            <li><a class="nav__link" data-nav="prestations" href="/essam-studio/prestations">Prestations</a></li>
+            <li><a class="nav__link" data-nav="methode" href="/essam-studio/methode">Méthode</a></li>
+            <li><a class="nav__link" data-nav="contact" href="/essam-studio/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn--primary btn--sm site-header__cta" href="/essam-studio/contact#rdv" data-booking data-track="cta_rdv" data-track-label="header" data-magnetic>
+          <span class="btn__label">Réserver mon appel gratuit</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-menu-toggle>
+          <span class="menu-toggle__lines" aria-hidden="true"></span>
+          <span class="visually-hidden">Ouvrir le menu</span>
+        </button>
+      </div>
+    </header>
+    <div class="menu-mobile" id="menu-mobile" data-menu hidden>
+      <nav aria-label="Navigation mobile">
+        <ul class="menu-mobile__list">
+          <li><a href="/essam-studio/">Accueil</a></li>
+          <li><a data-nav="realisations" aria-current="page" href="/essam-studio/realisations">Réalisations</a></li>
+          <li><a data-nav="prestations" href="/essam-studio/prestations">Prestations</a></li>
+          <li><a data-nav="methode" href="/essam-studio/methode">Méthode</a></li>
+          <li><a data-nav="contact" href="/essam-studio/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-mobile__foot">
+        <a class="btn btn--primary" href="/essam-studio/contact#rdv" data-booking data-track="cta_rdv" data-track-label="menu">
+          <span class="btn__label">Réserver mon appel gratuit (15 min)</span>
+        </a>
+        <a class="link" href="https://ig.me/m/ea.essam" target="_blank" rel="noopener" data-track="instagram_click" data-track-label="menu">M'écrire sur Instagram</a>
+      </div>
+    </div>
+
+    <main id="contenu">
+      <header class="page-hero container" data-thread-start>
+        <p class="eyebrow" data-reveal>Réalisations</p>
+        <h1 class="h1 page-hero__title" data-thread data-split>Un client réel. <em>Trois concepts.</em></h1>
+        <p class="lead" data-reveal>Les projets conceptuels sont des démonstrations, jouables. Ils montrent ce que je construirais pour vous.</p>
+        <nav class="work-index" aria-label="Projets" data-reveal>
+          <a href="#cafe-nova"><span>01</span> Café Nova</a>
+          <a href="#maison-braise"><span>02</span> Maison Braise</a>
+          <a href="#atelier-lin"><span>03</span> Atelier Lin</a>
+          <a href="#comptoir-22"><span>04</span> Le Comptoir 22</a>
+        </nav>
+      </header>
+
+      <!-- CAFÉ NOVA — client réel -->
+      <section class="work section nova" id="cafe-nova" aria-labelledby="nova-titre">
+        <div class="container">
+          <header class="nova__head">
+            <div class="nova__id">
+<div class="pcard" data-reveal data-thread>
+                <span class="pcard__num" aria-hidden="true">01</span>
+                <div class="pcard__top"><span>Fiche 01</span><span>ESSAM · N°05</span></div>
+                <span class="tag tag--real">Client</span>
+                <h2 class="pcard__name" id="nova-titre">Café Nova</h2>
+                <dl class="pcard__facts"><div><dt>Type</dt><dd>Site vitrine</dd></div><div><dt>Ville</dt><dd>Besançon</dd></div><div><dt>Ambiance</dt><dd>Douce, lumineuse</dd></div><div><dt>En ligne</dt><dd>Oui</dd></div></dl>
+              </div>
+            </div>
+            <div class="nova__text">
+              <p class="lead" data-reveal>Plus de vingt boissons à raconter. Il fallait une carte qui donne envie de pousser la porte.</p>
+              <dl class="nova__facts" data-reveal>
+                <div><dt>Ce qui a été fait</dt><dd>Direction artistique douce, six produits illustrés, récit de la provenance, horaires du jour mis en avant.</dd></div>
+                <div><dt>Priorités</dt><dd>Lecture mobile d'abord, chargement léger, horaires et adresse en un geste. <button type="button" class="egg" data-egg="realisations" aria-label="Petit ballon caché"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" /><path d="M50 6V94 M6 50H94 M20 15C31 30 31 70 20 85 M80 15C69 30 69 70 80 85" /></svg></button></dd></div>
+              </dl>
+            </div>
+          </header>
+
+          <div class="nova-show" data-nova data-reveal>
+            <div class="nova-show__desk">
+              <div class="nova-show__browser">
+                <span class="nova-show__bar" aria-hidden="true"><i></i><i></i><i></i><b>cafe-nova</b></span>
+                <div class="nova-show__screens">
+                  <picture class="is-active"><source type="image/avif" srcset="/essam-studio/img/nova-desktop-hero-1440.avif 1440w, /essam-studio/img/nova-desktop-hero-2880.avif 2880w" sizes="(min-width: 1000px) 62vw, 92vw" /><img src="/essam-studio/img/nova-desktop-hero-1440.webp" srcset="/essam-studio/img/nova-desktop-hero-1440.webp 1440w, /essam-studio/img/nova-desktop-hero-2880.webp 2880w" sizes="(min-width: 1000px) 62vw, 92vw" alt="Café Nova, accueil : « Ce qu'on sert ici. » et les six produits illustrés" width="1440" height="900" loading="lazy" decoding="async" /></picture>
+                  <picture><source type="image/avif" srcset="/essam-studio/img/nova-desktop-latte-1440.avif 1440w, /essam-studio/img/nova-desktop-latte-2880.avif 2880w" sizes="(min-width: 1000px) 62vw, 92vw" /><img src="/essam-studio/img/nova-desktop-latte-1440.webp" srcset="/essam-studio/img/nova-desktop-latte-1440.webp 1440w, /essam-studio/img/nova-desktop-latte-2880.webp 2880w" sizes="(min-width: 1000px) 62vw, 92vw" alt="Café Nova, fiche du latte banane caramélisée" width="1440" height="900" loading="lazy" decoding="async" /></picture>
+                  <picture><source type="image/avif" srcset="/essam-studio/img/nova-desktop-sirops-1440.avif 1440w, /essam-studio/img/nova-desktop-sirops-2880.avif 2880w" sizes="(min-width: 1000px) 62vw, 92vw" /><img src="/essam-studio/img/nova-desktop-sirops-1440.webp" srcset="/essam-studio/img/nova-desktop-sirops-1440.webp 1440w, /essam-studio/img/nova-desktop-sirops-2880.webp 2880w" sizes="(min-width: 1000px) 62vw, 92vw" alt="Café Nova, sirops de qualité et croffles" width="1440" height="900" loading="lazy" decoding="async" /></picture>
+                  <picture><source type="image/avif" srcset="/essam-studio/img/nova-desktop-partenaires-1440.avif 1440w, /essam-studio/img/nova-desktop-partenaires-2880.avif 2880w" sizes="(min-width: 1000px) 62vw, 92vw" /><img src="/essam-studio/img/nova-desktop-partenaires-1440.webp" srcset="/essam-studio/img/nova-desktop-partenaires-1440.webp 1440w, /essam-studio/img/nova-desktop-partenaires-2880.webp 2880w" sizes="(min-width: 1000px) 62vw, 92vw" alt="Café Nova, les deux partenaires : le café Araku et le matcha ANATAE" width="1440" height="900" loading="lazy" decoding="async" /></picture>
+                </div>
+              </div>
+              <div class="nova-show__dots" role="tablist" aria-label="Écrans de Café Nova sur ordinateur">
+                <button type="button" role="tab" aria-selected="true">Accueil</button>
+                <button type="button" role="tab" aria-selected="false">Latte</button>
+                <button type="button" role="tab" aria-selected="false">Sirops</button>
+                <button type="button" role="tab" aria-selected="false">Partenaires</button>
+              </div>
+            </div>
+            <div class="nova-show__mobile">
+              <div class="nova-show__phone" tabindex="0" aria-label="Le site Café Nova sur téléphone, faites défiler">
+                <picture><source srcset="/essam-studio/img/nova-mobile-full-1.avif" type="image/avif" /><img src="/essam-studio/img/nova-mobile-full-1.webp" alt="Café Nova sur téléphone, page complète" width="585" height="6000" loading="lazy" decoding="async" /></picture>
+                <picture><source srcset="/essam-studio/img/nova-mobile-full-2.avif" type="image/avif" /><img src="/essam-studio/img/nova-mobile-full-2.webp" alt="" width="585" height="6000" loading="lazy" decoding="async" /></picture>
+                <picture><source srcset="/essam-studio/img/nova-mobile-full-3.avif" type="image/avif" /><img src="/essam-studio/img/nova-mobile-full-3.webp" alt="" width="585" height="3177" loading="lazy" decoding="async" /></picture>
+              </div>
+              <p class="nova-show__hint small muted">Faites défiler le téléphone&nbsp;: c'est le vrai site, de haut en bas.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAISON BRAISE — restaurant (conceptuel) -->
+      <section class="work section" id="maison-braise" aria-labelledby="braise-titre">
+        <div class="container work__grid work__grid--rev">
+          <div class="work__text">
+            <div class="pcard" data-reveal data-thread>
+                <span class="pcard__num" aria-hidden="true">02</span>
+                <div class="pcard__top"><span>Fiche 02</span><span>ESSAM · N°05</span></div>
+                <span class="tag tag--concept">Projet conceptuel</span>
+                <h2 class="pcard__name" id="braise-titre">Maison Braise</h2>
+                <dl class="pcard__facts"><div><dt>Type</dt><dd>Restaurant</dd></div><div><dt>Ambiance</dt><dd>Braise, chaude</dd></div><div><dt>Démo</dt><dd>Carte et réservation</dd></div></dl>
+              </div>
+            <p class="lead" data-reveal>Un restaurant se choisit à l'émotion, puis se réserve en quelques secondes. Le site fait les deux.</p>
+            <dl class="work__facts" data-reveal>
+              <div><dt>À essayer</dt><dd>Parcourez la carte par service, puis réservez une table en trois gestes.</dd></div>
+            </dl>
+          </div>
+          <div class="work__demo" data-reveal>
+<div class="demo demo--braise" data-demo="braise">
+  <div class="demo__bar" aria-hidden="true"><i></i><i></i><i></i><b>maison-braise</b></div>
+  <div class="braise">
+    <div class="braise__nav"><span class="braise__logo">Maison <em>Braise</em></span><span class="braise__links"><span>La carte</span><span>Le lieu</span><span>Réserver</span></span></div>
+    <div class="braise__hero">
+      <div class="braise__embers" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="braise__kicker">Feu de bois · Produits du marché</p>
+      <p class="braise__title">Cuisiné<br /><em>à la flamme.</em></p>
+    </div>
+    <div class="braise__body">
+      <div class="braise__menu">
+        <div class="braise__tabs" role="tablist" aria-label="Services de la carte">
+          <button type="button" role="tab" aria-selected="true" data-braise-tab="midi">Midi</button>
+          <button type="button" role="tab" aria-selected="false" data-braise-tab="soir">Soir</button>
+          <button type="button" role="tab" aria-selected="false" data-braise-tab="desserts">Desserts</button>
+        </div>
+        <div role="tabpanel" aria-live="polite"><ul class="braise__dishes" data-braise-dishes></ul></div>
+      </div>
+      <form class="braise__book" data-braise-book aria-label="Réserver une table (démonstration)">
+        <p class="braise__book-title">Réserver une table</p>
+        <div class="braise__row">
+          <span>Couverts</span>
+          <span class="braise__stepper">
+            <button type="button" data-braise-step="-1" aria-label="Un couvert de moins">−</button>
+            <output data-braise-guests aria-live="polite">2</output>
+            <button type="button" data-braise-step="1" aria-label="Un couvert de plus">+</button>
+          </span>
+        </div>
+        <div class="braise__chips" role="radiogroup" aria-label="Jour" data-braise-days></div>
+        <div class="braise__chips" role="radiogroup" aria-label="Heure" data-braise-times></div>
+        <button class="braise__cta" type="submit">Confirmer la réservation</button>
+        <p class="braise__done" data-braise-done hidden></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ATELIER LIN — commerce (conceptuel) -->
+      <section class="work section" id="atelier-lin" aria-labelledby="lin-titre">
+        <div class="container work__grid">
+          <div class="work__text">
+            <div class="pcard" data-reveal data-thread>
+                <span class="pcard__num" aria-hidden="true">03</span>
+                <div class="pcard__top"><span>Fiche 03</span><span>ESSAM · N°05</span></div>
+                <span class="tag tag--concept">Projet conceptuel</span>
+                <h2 class="pcard__name" id="lin-titre">Atelier Lin</h2>
+                <dl class="pcard__facts"><div><dt>Type</dt><dd>Commerce</dd></div><div><dt>Ambiance</dt><dd>Lin clair</dd></div><div><dt>Démo</dt><dd>Fiche produit et panier</dd></div></dl>
+              </div>
+            <p class="lead" data-reveal>Une fiche produit qui se touche presque. Le choix du coloris change tout, instantanément.</p>
+            <dl class="work__facts" data-reveal>
+              <div><dt>À essayer</dt><dd>Changez de coloris et de taille, puis ajoutez au panier.</dd></div>
+            </dl>
+          </div>
+          <div class="work__demo" data-reveal>
+<div class="demo demo--lin" data-demo="lin">
+  <div class="demo__bar" aria-hidden="true"><i></i><i></i><i></i><b>atelier-lin</b></div>
+  <div class="lin">
+    <div class="lin__nav"><span class="lin__logo">ATELIER LIN</span><span class="lin__cart" data-lin-cart>Panier <b data-lin-count>0</b></span></div>
+    <div class="lin__product">
+      <div class="lin__visual" data-lin-visual aria-hidden="true">
+        <span class="lin__fold lin__fold--1"></span><span class="lin__fold lin__fold--2"></span><span class="lin__fold lin__fold--3"></span>
+      </div>
+      <div class="lin__info">
+        <p class="lin__kicker">Linge de lit · Lin lavé</p>
+        <p class="lin__name">Housse de couette</p>
+        <p class="lin__price" data-lin-price>129 €</p>
+        <fieldset class="lin__swatches">
+          <legend>Coloris : <b data-lin-color-name>Naturel</b></legend>
+          <label style="--sw:#d9cdb8"><input type="radio" name="lin-color" value="Naturel" checked /><span class="visually-hidden">Naturel</span></label>
+          <label style="--sw:#9aa88c"><input type="radio" name="lin-color" value="Sauge" /><span class="visually-hidden">Sauge</span></label>
+          <label style="--sw:#c08a6c"><input type="radio" name="lin-color" value="Argile" /><span class="visually-hidden">Argile</span></label>
+          <label style="--sw:#3b4150"><input type="radio" name="lin-color" value="Encre" /><span class="visually-hidden">Encre</span></label>
+        </fieldset>
+        <div class="lin__sizes" role="radiogroup" aria-label="Taille">
+          <button type="button" role="radio" aria-checked="true" data-lin-size="129">140 × 200</button>
+          <button type="button" role="radio" aria-checked="false" data-lin-size="159">240 × 220</button>
+          <button type="button" role="radio" aria-checked="false" data-lin-size="179">260 × 240</button>
+        </div>
+        <button class="lin__add" type="button" data-lin-add><span>Ajouter au panier</span></button>
+        <p class="lin__note">Démonstration : aucun achat n'est réalisé.</p>
+      </div>
+    </div>
+    <p class="lin__toast" data-lin-toast role="status" aria-live="polite"></p>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- LE COMPTOIR 22 — bureau de tabac-presse (conceptuel) -->
+      <section class="work section" id="comptoir-22" aria-labelledby="comptoir-titre">
+        <div class="container work__grid work__grid--rev">
+          <div class="work__text">
+            <div class="pcard" data-reveal data-thread>
+                <span class="pcard__num" aria-hidden="true">04</span>
+                <div class="pcard__top"><span>Fiche 04</span><span>ESSAM · N°05</span></div>
+                <span class="tag tag--concept">Projet conceptuel</span>
+                <h2 class="pcard__name" id="comptoir-titre">Le Comptoir 22</h2>
+                <dl class="pcard__facts"><div><dt>Type</dt><dd>Tabac-presse</dd></div><div><dt>Ambiance</dt><dd>Vert et laiton</dd></div><div><dt>Démo</dt><dd>Ouverture en direct</dd></div></dl>
+              </div>
+            <p class="lead" data-reveal>Ce que les clients cherchent d'abord : est-ce ouvert, et est-ce qu'on y trouve ce service. La réponse est en haut, en temps réel.</p>
+            <dl class="work__facts" data-reveal>
+              <div><dt>À essayer</dt><dd>Le statut d'ouverture suit l'heure réelle. Filtrez les services.</dd></div>
+              <div><dt>Conformité</dt><dd>Aucune publicité pour le tabac, conformément à la loi Évin : le site met en avant les services du quotidien.</dd></div>
+            </dl>
+          </div>
+          <div class="work__demo" data-reveal>
+<div class="demo demo--comptoir" data-demo="comptoir">
+  <div class="demo__bar" aria-hidden="true"><i></i><i></i><i></i><b>le-comptoir-22</b></div>
+  <div class="comptoir">
+    <div class="comptoir__nav"><span class="comptoir__logo"><b>22</b> Le Comptoir</span><span class="comptoir__status" data-comptoir-status><i></i><span>…</span></span></div>
+    <div class="comptoir__hero">
+      <p class="comptoir__kicker">Tabac · Presse · Services</p>
+      <p class="comptoir__title">Votre comptoir<br />de quartier.</p>
+      <p class="comptoir__hours" data-comptoir-hours></p>
+    </div>
+    <div class="comptoir__filters" role="group" aria-label="Filtrer les services">
+      <button type="button" aria-pressed="true" data-comptoir-filter="all">Tout</button>
+      <button type="button" aria-pressed="false" data-comptoir-filter="courrier">Courrier &amp; colis</button>
+      <button type="button" aria-pressed="false" data-comptoir-filter="paiement">Paiements</button>
+      <button type="button" aria-pressed="false" data-comptoir-filter="presse">Presse</button>
+    </div>
+    <ul class="comptoir__services" data-comptoir-services>
+      <li data-cat="presse"><b>Presse &amp; magazines</b><span>Quotidiens, régionaux, revues</span></li>
+      <li data-cat="courrier"><b>Point relais colis</b><span>Dépôt et retrait</span></li>
+      <li data-cat="courrier"><b>Timbres &amp; enveloppes</b><span>Lettres, recommandés</span></li>
+      <li data-cat="paiement"><b>Paiement de proximité</b><span>Factures et impôts</span></li>
+      <li data-cat="paiement"><b>Timbres fiscaux</b><span>Passeport, amendes</span></li>
+      <li data-cat="paiement"><b>Recharges</b><span>Téléphone, cartes prépayées</span></li>
+      <li data-cat="presse"><b>Papeterie</b><span>Cartes, stylos, cahiers</span></li>
+      <li data-cat="courrier"><b>Photocopies</b><span>Noir et blanc, couleur</span></li>
+    </ul>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+    <section class="cta-final" aria-labelledby="cta-final-titre" data-cta-final>
+      <div class="container cta-final__inner">
+        <div class="hoop" data-hoop data-thread>
+          <svg class="hoop__art" viewBox="0 0 240 200" aria-hidden="true">
+            <path class="hoop__board" d="M60 10H180V86H60Z M100 38H140V70H100Z" />
+            <path class="hoop__net" data-hoop-net d="M84 92 L92 150 M100 92 L104 152 M120 92 L120 154 M140 92 L136 152 M156 92 L148 150 M88 112 H152 M92 132 H148 M96 150 H144" />
+            <ellipse class="hoop__rim" cx="120" cy="92" rx="38" ry="7" />
+          </svg>
+          <span class="hoop__ball" data-hoop-ball aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" /><path d="M50 3V97 M3 50H97 M18 12C30 28 30 72 18 88 M82 12C70 28 70 72 82 88" /></svg></span>
+          <p class="hoop__score" data-hoop-score role="status" aria-live="polite"></p>
+        </div>
+        <p class="eyebrow">N°05, mon numéro de maillot · Le panier, c'est ici</p>
+        <h2 class="display cta-final__title" id="cta-final-titre" data-split>
+          Votre prochain client vous cherche déjà.<br /><em>Qu'il vous trouve.</em>
+        </h2>
+        <div class="cta-final__actions">
+          <a class="btn btn--primary btn--lg" href="/essam-studio/contact#rdv" data-booking data-track="cta_rdv" data-track-label="cta-final" data-magnetic data-hoop-target>
+            <span class="btn__label">Réserver mon appel gratuit (15 min)</span>
+          </a>
+          <a class="btn btn--ghost" href="/essam-studio/contact#devis" data-track="cta_devis" data-track-label="cta-final" data-magnetic>
+            <span class="btn__label">Demander mon devis gratuit</span>
+          </a>
+          <button class="link hoop__try" type="button" data-hoop-shoot>Tenter le panier</button>
+        </div>
+        <p class="cta-final__legal">Conforme dès le premier jour&nbsp;: mentions légales, RGPD, cookies, accessibilité pris en charge. <a href="/essam-studio/legal">Voir ma page Légal</a></p>
+        <p class="cta-final__contact"><a href="mailto:amsimnaessam@gmail.com" data-track="email_click">amsimnaessam@gmail.com</a><span aria-hidden="true">·</span><a href="https://ig.me/m/ea.essam" target="_blank" rel="noopener" data-track="instagram_click" data-track-label="cta-final">@ea.essam sur Instagram</a></p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="logo logo--lg" href="/essam-studio/" aria-label="Essam, retour à l'accueil"><svg class="logo__mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+  <path class="logo__seams" d="M16 4V28 M4 16H28 M8.6 6.4C12.4 10.8 12.4 21.2 8.6 25.6 M23.4 6.4C19.6 10.8 19.6 21.2 23.4 25.6" />
+  <circle class="logo__ball" cx="16" cy="16" r="12" />
+</svg><span class="logo__word">ESSAM</span><span class="logo__num" aria-hidden="true">05</span>
+</a>
+          <p>Création de sites web qualitatifs.<br />Pour les entreprises, commerces et indépendants.</p>
+        </div>
+        <nav class="site-footer__col" aria-label="Pages">
+          <p class="site-footer__title">Pages</p>
+          <ul>
+            <li><a href="/essam-studio/realisations">Réalisations</a></li>
+            <li><a href="/essam-studio/prestations">Prestations</a></li>
+            <li><a href="/essam-studio/methode">Méthode</a></li>
+            <li><a href="/essam-studio/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__col">
+          <p class="site-footer__title">Contact</p>
+          <ul>
+            <li><a href="mailto:amsimnaessam@gmail.com" data-track="email_click">amsimnaessam@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/ea.essam/" target="_blank" rel="noopener" data-track="instagram_click" data-track-label="footer">Instagram · @ea.essam</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__title">Légal &amp; réglages</p>
+          <ul>
+            <li><a href="/essam-studio/legal#mentions">Mentions légales</a></li>
+            <li><a href="/essam-studio/legal#confidentialite">Confidentialité</a></li>
+            <li><a href="/essam-studio/legal#cgp">Conditions de prestation</a></li>
+            <li><button class="footer-btn" type="button" data-consent-open>Gérer les cookies</button></li>
+            <li><button class="footer-btn" type="button" data-motion-toggle aria-pressed="false">Réduire les animations</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container site-footer__base">
+        <p>© <span data-year>2026</span> Essam · Micro-entreprise</p>
+        <p class="egg-count" data-egg-count hidden></p>
+        <p class="site-footer__made">Conçu et codé à la main<span class="num-explain"> par le N°05</span>. Aucun modèle.</p>
+      </div>
+    </footer>
+
+    <a class="sticky-cta" href="/essam-studio/contact#rdv" data-booking data-sticky-cta data-track="cta_rdv" data-track-label="sticky">
+      <span class="sticky-cta__dot" aria-hidden="true"></span>
+      <span>Appel gratuit · 15 min</span>
+    </a>
+
+    <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false" aria-label="Activer le son">
+      <span class="sound-toggle__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="sound-toggle__label">Son</span>
+    </button>
+
+    <div class="consent" role="dialog" aria-modal="false" aria-labelledby="consent-titre" aria-describedby="consent-texte" data-consent hidden>
+      <p class="consent__title" id="consent-titre">Cookies de mesure d'audience</p>
+      <p class="consent__text" id="consent-texte">
+        Avec votre accord, j'utilise Google Analytics et Microsoft Clarity pour comprendre comment le site est utilisé et l'améliorer.
+        Rien n'est déposé si vous refusez. Vous pouvez changer d'avis à tout moment depuis le pied de page.
+        <a href="/essam-studio/legal#cookies">En savoir plus</a>
+      </p>
+      <div class="consent__actions">
+        <button class="btn btn--ghost btn--sm" type="button" data-consent-choice="refuse">Refuser</button>
+        <button class="btn btn--ghost btn--sm" type="button" data-consent-choice="accept">Accepter</button>
+      </div>
+    </div>
+
+    <div class="curtain" aria-hidden="true" data-curtain><span class="curtain__line"></span></div>
+    <div class="cursor is-hidden" aria-hidden="true" data-cursor-el><span class="cursor__dot"></span><span class="cursor__ring"><span class="cursor__label"></span></span></div>
+
+  </body>
+</html>

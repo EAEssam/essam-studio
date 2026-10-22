@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="author" content="Essam" />
+    <meta property="og:site_name" content="Essam" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://eaessam.github.io/essam-studio/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Essam — sites web qualitatifs, rapides, conformes" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/essam-studio/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/essam-studio/apple-touch-icon.png" />
+    <link rel="preload" href="/essam-studio/fonts/cormorant-300-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/essam-studio/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      // Avant tout rendu : signale que le JS tourne et applique la préférence « animations réduites ».
+      (function (d) {
+        var h = d.documentElement; h.classList.add('js');
+        try {
+          if (localStorage.getItem('essam:motion') === 'reduce' || matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('reduce');
+          // Arrivée depuis une autre page du site : le rideau de transition se lève.
+          if (sessionStorage.getItem('essam:nav')) { h.classList.add('from-nav'); sessionStorage.removeItem('essam:nav'); }
+        } catch (e) {}
+        // Filet de sécurité : si le JS principal ne démarre pas, tout le contenu reste visible.
+        setTimeout(function () { if (!window.__essam) h.classList.add('anim-fail'); }, 3500);
+      })(document);
+    </script>
+
+    <title>Méthode — Qualité, conformité, vitesse | Essam</title>
+    <meta name="description" content="Pourquoi Essam : des sites qualitatifs, conformes dès le premier jour (mentions légales, RGPD, cookies, accessibilité) et livrés en 3 jours ouvrés. Ce site en est la démonstration." />
+    <link rel="canonical" href="https://eaessam.github.io/essam-studio/methode" />
+    <meta property="og:title" content="Méthode — Essam" />
+    <meta property="og:description" content="Trois exigences. Aucune négociable." />
+    <meta property="og:url" content="https://eaessam.github.io/essam-studio/methode" />
+    <script type="module" crossorigin src="/essam-studio/assets/methode-CAqN51rR.js"></script>
+    <link rel="modulepreload" crossorigin href="/essam-studio/assets/main-DxUbbfBF.js">
+    <link rel="stylesheet" crossorigin href="/essam-studio/assets/main-7rruMuZH.css">
+  </head>
+  <body class="page-method">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header" data-header>
+      <div class="site-header__inner">
+        <a class="logo" href="/essam-studio/" aria-label="Essam, retour à l'accueil" data-cursor="hover"><svg class="logo__mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+  <path class="logo__seams" d="M16 4V28 M4 16H28 M8.6 6.4C12.4 10.8 12.4 21.2 8.6 25.6 M23.4 6.4C19.6 10.8 19.6 21.2 23.4 25.6" />
+  <circle class="logo__ball" cx="16" cy="16" r="12" />
+</svg><span class="logo__word">ESSAM</span><span class="logo__num" aria-hidden="true">05</span>
+</a>
+        <nav class="nav" aria-label="Navigation principale">
+          <ul class="nav__list">
+            <li><a class="nav__link" data-nav="realisations" href="/essam-studio/realisations">Réalisations</a></li>
+            <li><a class="nav__link" data-nav="prestations" href="/essam-studio/prestations">Prestations</a></li>
+            <li><a class="nav__link" data-nav="methode" aria-current="page" href="/essam-studio/methode">Méthode</a></li>
+            <li><a class="nav__link" data-nav="contact" href="/essam-studio/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a class="btn btn--primary btn--sm site-header__cta" href="/essam-studio/contact#rdv" data-booking data-track="cta_rdv" data-track-label="header" data-magnetic>
+          <span class="btn__label">Réserver mon appel gratuit</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" data-menu-toggle>
+          <span class="menu-toggle__lines" aria-hidden="true"></span>
+          <span class="visually-hidden">Ouvrir le menu</span>
+        </button>
+      </div>
+    </header>
+    <div class="menu-mobile" id="menu-mobile" data-menu hidden>
+      <nav aria-label="Navigation mobile">
+        <ul class="menu-mobile__list">
+          <li><a href="/essam-studio/">Accueil</a></li>
+          <li><a data-nav="realisations" href="/essam-studio/realisations">Réalisations</a></li>
+          <li><a data-nav="prestations" href="/essam-studio/prestations">Prestations</a></li>
+          <li><a data-nav="methode" aria-current="page" href="/essam-studio/methode">Méthode</a></li>
+          <li><a data-nav="contact" href="/essam-studio/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-mobile__foot">
+        <a class="btn btn--primary" href="/essam-studio/contact#rdv" data-booking data-track="cta_rdv" data-track-label="menu">
+          <span class="btn__label">Réserver mon appel gratuit (15 min)</span>
+        </a>
+        <a class="link" href="https://ig.me/m/ea.essam" target="_blank" rel="noopener" data-track="instagram_click" data-track-label="menu">M'écrire sur Instagram</a>
+      </div>
+    </div>
+
+    <main id="contenu">
+      <header class="page-hero container" data-thread-start>
+        <p class="eyebrow" data-reveal>Méthode</p>
+        <h1 class="h1 page-hero__title" data-thread data-split>Trois exigences. <em>Aucune négociable.</em></h1>
+        <p class="lead" data-reveal>Pas de visage. Pas de promesse en l'air. Une méthode, visible dans chaque détail.</p>
+      </header>
+
+      <section class="pillars" aria-label="Les trois exigences">
+        <article class="pillar container" data-pillar>
+          <span class="pillar__num" aria-hidden="true">01</span>
+          <div class="pillar__body">
+            <p class="eyebrow">Qualité</p>
+            <h2 class="h2" data-split>Chaque pixel <em>est décidé.</em></h2>
+            <p class="lead" data-reveal>Typographie, espaces, contrastes, mouvement&nbsp;: rien n'est laissé au hasard ni à un modèle. Un site qualitatif inspire confiance avant même d'être lu.</p>
+            <ul class="pillar__points" data-reveal>
+              <li>Design dessiné pour votre activité</li>
+              <li>Une seule idée forte par écran</li>
+              <li>Un chemin clair vers l'action</li>
+            </ul>
+          </div>
+        </article>
+        <article class="pillar container" data-pillar>
+          <span class="pillar__num" aria-hidden="true">02</span>
+          <div class="pillar__body">
+            <p class="eyebrow">Conformité</p>
+            <h2 class="h2" data-split>Conforme <em>dès le premier jour.</em></h2>
+            <p class="lead" data-reveal>Mentions légales, RGPD, cookies, accessibilité&nbsp;: je les prends en charge à la création. Vous n'avez pas à y penser.</p>
+            <ul class="pillar__points" data-reveal>
+              <li>Mentions légales et politique de confidentialité</li>
+              <li>Bandeau cookies qui respecte le refus</li>
+              <li>Aucun traceur avant votre accord</li>
+              <li>Navigation au clavier, contrastes, textes alternatifs</li>
+            </ul>
+          </div>
+        </article>
+        <article class="pillar container" data-pillar>
+          <span class="pillar__num" aria-hidden="true">03</span>
+          <div class="pillar__body">
+            <p class="eyebrow">Vitesse</p>
+            <h2 class="h2" data-split>3 jours ouvrés. <em>Et un site rapide.</em></h2>
+            <p class="lead" data-reveal>Deux vitesses comptent&nbsp;: celle de la livraison, et celle de l'affichage. Un site lent perd ses visiteurs avant d'avoir parlé.</p>
+            <ul class="pillar__points" data-reveal>
+              <li>Images aux formats modernes</li>
+              <li>Polices hébergées sur le site</li>
+              <li>Effets chargés seulement quand ils servent</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="section proof-live" aria-labelledby="demo-titre">
+        <div class="container">
+          <p class="eyebrow" data-reveal>Démonstration</p>
+          <h2 class="h2" id="demo-titre" data-split>Ce site est <em>la preuve.</em></h2>
+          <p class="lead" data-reveal>Mesuré à l'instant, dans votre navigateur. Rien n'est inventé&nbsp;: ces chiffres changent selon votre appareil et votre connexion.</p>
+          <dl class="metrics" data-metrics data-thread>
+            <div class="card metrics__item" data-glow data-reveal><dt>Page affichée en</dt><dd><span data-metric="load">—</span></dd></div>
+            <div class="card metrics__item" data-glow data-reveal><dt>Poids transféré</dt><dd><span data-metric="weight">—</span></dd></div>
+            <div class="card metrics__item" data-glow data-reveal><dt>Images par seconde</dt><dd><span data-metric="fps">—</span></dd></div>
+            <div class="card metrics__item" data-glow data-reveal><dt>Traceurs actifs</dt><dd><span data-metric="trackers">—</span></dd></div>
+          </dl>
+          <div class="metrics__actions" data-reveal>
+            <button class="btn btn--ghost btn--sm" type="button" data-remeasure><span class="btn__label">Relancer la mesure</span></button>
+            <p class="small muted">Le compteur d'images tourne en direct : faites défiler, il doit tenir. Le nombre de traceurs dépend de votre choix dans le bandeau cookies. <button type="button" class="egg" data-egg="methode" aria-label="Petit ballon caché"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" /><path d="M50 6V94 M6 50H94 M20 15C31 30 31 70 20 85 M80 15C69 30 69 70 80 85" /></svg></button></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section class="cta-final" aria-labelledby="cta-final-titre" data-cta-final>
+      <div class="container cta-final__inner">
+        <div class="hoop" data-hoop data-thread>
+          <svg class="hoop__art" viewBox="0 0 240 200" aria-hidden="true">
+            <path class="hoop__board" d="M60 10H180V86H60Z M100 38H140V70H100Z" />
+            <path class="hoop__net" data-hoop-net d="M84 92 L92 150 M100 92 L104 152 M120 92 L120 154 M140 92 L136 152 M156 92 L148 150 M88 112 H152 M92 132 H148 M96 150 H144" />
+            <ellipse class="hoop__rim" cx="120" cy="92" rx="38" ry="7" />
+          </svg>
+          <span class="hoop__ball" data-hoop-ball aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" /><path d="M50 3V97 M3 50H97 M18 12C30 28 30 72 18 88 M82 12C70 28 70 72 82 88" /></svg></span>
+          <p class="hoop__score" data-hoop-score role="status" aria-live="polite"></p>
+        </div>
+        <p class="eyebrow">N°05, mon numéro de maillot · Le panier, c'est ici</p>
+        <h2 class="display cta-final__title" id="cta-final-titre" data-split>
+          Votre prochain client vous cherche déjà.<br /><em>Qu'il vous trouve.</em>
+        </h2>
+        <div class="cta-final__actions">
+          <a class="btn btn--primary btn--lg" href="/essam-studio/contact#rdv" data-booking data-track="cta_rdv" data-track-label="cta-final" data-magnetic data-hoop-target>
+            <span class="btn__label">Réserver mon appel gratuit (15 min)</span>
+          </a>
+          <a class="btn btn--ghost" href="/essam-studio/contact#devis" data-track="cta_devis" data-track-label="cta-final" data-magnetic>
+            <span class="btn__label">Demander mon devis gratuit</span>
+          </a>
+          <button class="link hoop__try" type="button" data-hoop-shoot>Tenter le panier</button>
+        </div>
+        <p class="cta-final__legal">Conforme dès le premier jour&nbsp;: mentions légales, RGPD, cookies, accessibilité pris en charge. <a href="/essam-studio/legal">Voir ma page Légal</a></p>
+        <p class="cta-final__contact"><a href="mailto:amsimnaessam@gmail.com" data-track="email_click">amsimnaessam@gmail.com</a><span aria-hidden="true">·</span><a href="https://ig.me/m/ea.essam" target="_blank" rel="noopener" data-track="instagram_click" data-track-label="cta-final">@ea.essam sur Instagram</a></p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="logo logo--lg" href="/essam-studio/" aria-label="Essam, retour à l'accueil"><svg class="logo__mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+  <path class="logo__seams" d="M16 4V28 M4 16H28 M8.6 6.4C12.4 10.8 12.4 21.2 8.6 25.6 M23.4 6.4C19.6 10.8 19.6 21.2 23.4 25.6" />
+  <circle class="logo__ball" cx="16" cy="16" r="12" />
+</svg><span class="logo__word">ESSAM</span><span class="logo__num" aria-hidden="true">05</span>
+</a>
+          <p>Création de sites web qualitatifs.<br />Pour les entreprises, commerces et indépendants.</p>
+        </div>
+        <nav class="site-footer__col" aria-label="Pages">
+          <p class="site-footer__title">Pages</p>
+          <ul>
+            <li><a href="/essam-studio/realisations">Réalisations</a></li>
+            <li><a href="/essam-studio/prestations">Prestations</a></li>
+            <li><a href="/essam-studio/methode">Méthode</a></li>
+            <li><a href="/essam-studio/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__col">
+          <p class="site-footer__title">Contact</p>
+          <ul>
+            <li><a href="mailto:amsimnaessam@gmail.com" data-track="email_click">amsimnaessam@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/ea.essam/" target="_blank" rel="noopener" data-track="instagram_click" data-track-label="footer">Instagram · @ea.essam</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <p class="site-footer__title">Légal &amp; réglages</p>
+          <ul>
+            <li><a href="/essam-studio/legal#mentions">Mentions légales</a></li>
+            <li><a href="/essam-studio/legal#confidentialite">Confidentialité</a></li>
+            <li><a href="/essam-studio/legal#cgp">Conditions de prestation</a></li>
+            <li><button class="footer-btn" type="button" data-consent-open>Gérer les cookies</button></li>
+            <li><button class="footer-btn" type="button" data-motion-toggle aria-pressed="false">Réduire les animations</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container site-footer__base">
+        <p>© <span data-year>2026</span> Essam · Micro-entreprise</p>
+        <p class="egg-count" data-egg-count hidden></p>
+        <p class="site-footer__made">Conçu et codé à la main<span class="num-explain"> par le N°05</span>. Aucun modèle.</p>
+      </div>
+    </footer>
+
+    <a class="sticky-cta" href="/essam-studio/contact#rdv" data-booking data-sticky-cta data-track="cta_rdv" data-track-label="sticky">
+      <span class="sticky-cta__dot" aria-hidden="true"></span>
+      <span>Appel gratuit · 15 min</span>
+    </a>
+
+    <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false" aria-label="Activer le son">
+      <span class="sound-toggle__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="sound-toggle__label">Son</span>
+    </button>
+
+    <div class="consent" role="dialog" aria-modal="false" aria-labelledby="consent-titre" aria-describedby="consent-texte" data-consent hidden>
+      <p class="consent__title" id="consent-titre">Cookies de mesure d'audience</p>
+      <p class="consent__text" id="consent-texte">
+        Avec votre accord, j'utilise Google Analytics et Microsoft Clarity pour comprendre comment le site est utilisé et l'améliorer.
+        Rien n'est déposé si vous refusez. Vous pouvez changer d'avis à tout moment depuis le pied de page.
+        <a href="/essam-studio/legal#cookies">En savoir plus</a>
+      </p>
+      <div class="consent__actions">
+        <button class="btn btn--ghost btn--sm" type="button" data-consent-choice="refuse">Refuser</button>
+        <button class="btn btn--ghost btn--sm" type="button" data-consent-choice="accept">Accepter</button>
+      </div>
+    </div>
+
+    <div class="curtain" aria-hidden="true" data-curtain><span class="curtain__line"></span></div>
+    <div class="cursor is-hidden" aria-hidden="true" data-cursor-el><span class="cursor__dot"></span><span class="cursor__ring"><span class="cursor__label"></span></span></div>
+
+  </body>
+</html>
