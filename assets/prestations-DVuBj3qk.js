@@ -1,0 +1,1 @@
+import{p as r}from"./main-vq09uVv1.js";function a(){document.querySelectorAll("[data-formats] .formats__row").forEach(t=>{t.addEventListener("click",()=>{const e=t.getAttribute("aria-expanded")!=="true";t.setAttribute("aria-expanded",String(e)),document.getElementById(t.getAttribute("aria-controls")).hidden=!e,r(e?"tick":"hover")})})}a();
