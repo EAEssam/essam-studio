@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /merci
 
-Sitemap: https://eaessam.github.io/essam-studio/sitemap.xml
+Sitemap: https://fivedigitalstudio.com/sitemap.xml
