@@ -1,66 +1,84 @@
 /* ============================================================
-   Novanthic Digital Company : couche de marque et thème clair.
+   Novanthic Digital Company : couche de marque.
+   Direction « Galerie blanche & bleu électrique » (choisie le 21/11/2026).
    Chargée après main-*.css sur toutes les pages : elle redéfinit
-   les couleurs (variables) et corrige les rares teintes sombres
+   les couleurs et la typo (variables) et corrige les teintes sombres
    écrites en dur dans la feuille compilée.
+   Les noms de variables « gold » viennent de l'ancien thème : ils
+   portent maintenant l'accent bleu.
    ============================================================ */
 
 :root {
-  /* Fonds : ivoire chaud, comme l'ambiance « Lin clair » de l'Atelier */
-  --c-void: #f6f1e8;
-  --c-ink-0: #f1ebe0;
-  --c-ink-1: #fffdf9;
-  --c-ink-2: #ece4d6;
+  /* Fonds */
+  --c-void: #ffffff;
+  --c-ink-0: #f6f6f4;
+  --c-ink-1: #ffffff;
+  --c-ink-2: #f0f0ee;
   /* Filets et bordures */
-  --c-line: rgba(140, 105, 50, .28);
-  --c-line-soft: rgba(40, 32, 20, .11);
+  --c-line: rgba(47, 75, 255, .25);
+  --c-line-soft: rgba(0, 0, 0, .09);
   /* Texte */
-  --c-text: #1e1b17;
-  --c-muted: #665e53;
-  /* Or approfondi pour rester lisible sur fond clair */
-  --c-gold: #9a7034;
-  --c-gold-rgb: 154, 112, 52;
-  --c-gold-deep: #7d5a27;
-  --c-gold-dim: #d9c6a3;
-  --c-gold-btn: #c49a5a;
+  --c-text: #0f0f10;
+  --c-muted: #5c5c63;
+  /* Accent : bleu électrique */
+  --c-gold: #2f4bff;
+  --c-gold-rgb: 47, 75, 255;
+  --c-gold-deep: #1d33cc;
+  --c-gold-dim: #c9d1ff;
+  --c-gold-btn: #2f4bff;
   --glow-gold: 0 0 0 1px rgba(var(--c-gold-rgb), .35), 0 0 40px -10px rgba(var(--c-gold-rgb), .35);
-  --shadow-card: 0 30px 70px -45px rgba(70, 50, 20, .35);
+  --shadow-card: 0 30px 70px -45px rgba(15, 20, 45, .3);
+  /* Typo : titres en Inter (sans empattements), le texte reste en Inter */
+  --f-display: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
-::selection { background: rgba(var(--c-gold-rgb), .25); color: var(--c-text); }
+/* ---------- Titres : Inter, serrés, sans italique ---------- */
+.display, .h1, .h2, .h3, h1, h2, .hero__title, .intro__name {
+  font-weight: 500 !important;
+  letter-spacing: -.035em;
+}
+:is(.display, .h1, .h2, .h3, h1, h2, h3) em, em.hero__line, .kinetic__turn em, .pv__title em, .intro__sub b {
+  font-style: normal !important;
+}
+
+::selection { background: rgba(var(--c-gold-rgb), .2); color: var(--c-text); }
 .skip-link { color: var(--c-void); }
 
-/* Boutons : or plus lumineux en fond, texte encre */
-.btn--primary { background: var(--c-gold-btn); color: #1a140c; }
-.btn--ghost { background: rgba(255, 255, 255, .5); }
+/* Boutons : bleu plein, texte blanc */
+.btn--primary { background: var(--c-gold-btn); color: #fff; }
+.btn--ghost { background: rgba(255, 255, 255, .6); }
 .link:hover { color: var(--c-gold-deep); }
-.sticky-cta { background: var(--c-gold-btn); color: #1a140c; }
+.sticky-cta { background: var(--c-gold-btn); color: #fff; }
+.sticky-cta__dot { background: #fff; }
+.sticky-cta__dot:after { border-color: #fff; }
+.cursor__label { color: #fff; }
+.nova-show__dots button[aria-selected=true] { color: #fff; }
 
-/* Ombres adoucies (elles étaient pensées pour un fond noir) */
+/* Ombres neutres (elles étaient pensées pour un fond noir) */
 .kinetic { box-shadow: none; }
-.pv-frame { box-shadow: 0 40px 90px -45px rgba(70, 50, 20, .45), 0 0 0 1px var(--c-line-soft); }
-.demo { box-shadow: 0 50px 100px -50px rgba(70, 50, 20, .45), 0 0 0 1px var(--c-line-soft); }
-.nova-show__browser { box-shadow: 0 50px 100px -50px rgba(70, 50, 20, .45), 0 0 0 1px var(--c-line-soft); }
-.nova-show__phone { box-shadow: 0 40px 80px -40px rgba(70, 50, 20, .45), 0 0 0 1px var(--c-line-soft); }
-.pv__cookie { box-shadow: 0 1em 2em -1em rgba(0, 0, 0, .35); }
+.pv-frame { box-shadow: 0 40px 90px -45px rgba(15, 20, 45, .35), 0 0 0 1px var(--c-line-soft); }
+.demo { box-shadow: 0 50px 100px -50px rgba(15, 20, 45, .35), 0 0 0 1px var(--c-line-soft); }
+.nova-show__browser { box-shadow: 0 50px 100px -50px rgba(15, 20, 45, .35), 0 0 0 1px var(--c-line-soft); }
+.nova-show__phone { box-shadow: 0 40px 80px -40px rgba(15, 20, 45, .35), 0 0 0 1px var(--c-line-soft); }
+.pv__cookie { box-shadow: 0 1em 2em -1em rgba(0, 0, 0, .3); }
 @media (hover: hover) {
-  .wcard:hover .wcard__media { box-shadow: 0 40px 80px -45px rgba(70, 50, 20, .45), 0 0 40px -14px rgba(var(--c-gold-rgb), .3); }
+  .wcard:hover .wcard__media { box-shadow: 0 40px 80px -45px rgba(15, 20, 45, .35), 0 0 40px -14px rgba(var(--c-gold-rgb), .3); }
 }
 
 /* Bandeau cookies */
-.consent { background: rgba(255, 253, 249, .97); box-shadow: 0 30px 80px -30px rgba(70, 50, 20, .4); }
+.consent { background: rgba(255, 255, 255, .97); box-shadow: 0 30px 80px -30px rgba(15, 20, 45, .3); }
 
 /* Champs et cases */
-.input:hover { border-color: rgba(40, 32, 20, .25); }
-.check input { border-color: rgba(40, 32, 20, .3); }
-.check input:checked:after, .check input:after { border-color: #1a140c; }
-.choice--opt .choice__body:before { border-color: rgba(40, 32, 20, .3); }
-.choice__swatch { box-shadow: inset 0 0 0 1px rgba(40, 32, 20, .15); }
+.input:hover { border-color: rgba(0, 0, 0, .22); }
+.check input { border-color: rgba(0, 0, 0, .28); }
+.check input:checked:after, .check input:after { border-color: #fff; }
+.choice--opt .choice__body:before { border-color: rgba(0, 0, 0, .28); }
+.choice__swatch { box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .12); }
 .choice--opt input:checked + .choice__body:before { color: #fff; }
 
 /* Panier final */
-.hoop__net { stroke: rgba(30, 27, 23, .45); }
-.hoop__ball { filter: drop-shadow(0 10px 12px rgba(70, 50, 20, .35)); }
+.hoop__net { stroke: rgba(15, 15, 16, .4); }
+.hoop__ball { filter: drop-shadow(0 10px 12px rgba(15, 20, 45, .3)); }
 
 /* ---------- Logo : NOVANTHIC + « Digital Company » ---------- */
 .logo__num {
@@ -72,12 +90,13 @@
   white-space: nowrap;
   color: var(--c-gold);
 }
+.logo--lg .logo__num { font-size: .62rem; }
 @media (max-width: 420px) {
   .site-header .logo__num { display: none; }
 }
 
 /* ---------- Intro : NOVANTHIC (9 lettres au lieu de 5) ---------- */
-.intro__name { font-size: clamp(2.4rem, 9.5vw, 7.5rem); letter-spacing: .12em; margin-right: -.12em; }
+.intro__name { font-size: clamp(2.2rem, 8.5vw, 6.5rem); letter-spacing: .1em; margin-right: -.1em; }
 .intro__name span:nth-child(1) { --dx: -.32em; --i: 0; }
 .intro__name span:nth-child(2) { --dx: -.24em; --i: 1; }
 .intro__name span:nth-child(3) { --dx: -.16em; --i: 2; }
@@ -87,23 +106,102 @@
 .intro__name span:nth-child(7) { --dx: .16em;  --i: 6; }
 .intro__name span:nth-child(8) { --dx: .24em;  --i: 7; }
 .intro__name span:nth-child(9) { --dx: .32em;  --i: 8; }
-.intro__sub b { font-size: 1.05rem; }
+.intro__sub b { font-family: var(--f-text); font-size: var(--fs-eyebrow); font-weight: 500; letter-spacing: .36em; text-transform: uppercase; }
 
-/* ---------- Éléments fixes : verre clair au lieu de verre noir ---------- */
-.site-header.is-scrolled { background: rgba(246, 241, 232, .9); }
-.sound-toggle { background: rgba(255, 253, 249, .92); color: var(--c-text); }
+/* ---------- Éléments fixes : verre blanc au lieu de verre noir ---------- */
+.site-header.is-scrolled { background: rgba(255, 255, 255, .9); }
+.sound-toggle { background: rgba(255, 255, 255, .92); color: var(--c-text); }
 .site-header .sound-toggle { background: transparent; }
-.egg-toast { background: rgba(255, 253, 249, .97); color: var(--c-text); }
-.tag { background: rgba(255, 255, 255, .55); }
-.pv-frame__bar { background: #e6dfd2; }
-.pv-frame__bar i { background: #cbc2b3; }
-.pv-frame__bar b { color: #6f675b; }
-.logo--lg .logo__num { font-size: .62rem; }
+.egg-toast { background: rgba(255, 255, 255, .97); color: var(--c-text); }
+.tag { background: rgba(255, 255, 255, .6); }
+.hero__hint { background: rgba(255, 255, 255, .92); }
+.pv-frame__bar { background: #ececea; }
+.pv-frame__bar i { background: #cfcfcc; }
+.pv-frame__bar b { color: #6a6a70; }
 
 /* Textes secondaires écrits en clair dans la feuille compilée */
 .hero__lead { color: var(--c-muted); font-weight: 350; }
-.legal p { color: #3d3830; }
-.kinetic__kicker, .field__error, .form__status { color: #b23a30; }
+.legal p { color: #33333a; }
+.kinetic__kicker, .field__error, .form__status { color: #c42b2b; }
 .pv-serp__title { color: #1a4fb5; }
-.choice--opt input:checked + .choice__body:before { color: #1a140c; }
-.hero__hint { background: rgba(255, 253, 249, .92); }
+
+/* ---------- Filet : dégradé bleu au lieu du rouge / or / vert ---------- */
+:root { --filet: linear-gradient(90deg, transparent, #2f4bff 30%, #8a9bff 65%, transparent); }
+
+/* ---------- Logo : étoile « nova » blanche dans un carré bleu ---------- */
+.logo__mark .nv-mark__bg { fill: var(--c-gold); }
+.logo__mark path.nv-mark__star { fill: #fff; stroke: none; }
+.logo:hover .logo__mark { filter: drop-shadow(0 4px 10px rgba(var(--c-gold-rgb), .45)); }
+
+/* ---------- Accueil : composition d'interfaces (remplace le ballon) ---------- */
+.nv-visual { position: absolute; inset: 0; pointer-events: none; }
+.nv-visual__grid {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(var(--c-gold-rgb), .18) 1px, transparent 1.2px);
+  background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(60% 55% at 74% 50%, #000 30%, transparent 75%);
+          mask-image: radial-gradient(60% 55% at 74% 50%, #000 30%, transparent 75%);
+}
+.nv-visual__glow {
+  position: absolute; left: 74%; top: 50%; width: 620px; height: 620px; translate: -50% -50%;
+  background: radial-gradient(circle, rgba(var(--c-gold-rgb), .16), rgba(138, 155, 255, .08) 45%, transparent 70%);
+  filter: blur(10px);
+}
+.nv-card {
+  position: absolute; background: #fff; border: 1px solid var(--c-line-soft); border-radius: 16px;
+  box-shadow: 0 30px 60px -30px rgba(15, 20, 45, .28), 0 2px 6px rgba(15, 20, 45, .04);
+  font-family: var(--f-text); color: var(--c-text);
+  animation: nv-float 7s ease-in-out infinite;
+}
+.nv-card b { display: block; font-weight: 600; letter-spacing: -.01em; }
+.nv-card small { display: block; font-size: .72rem; color: var(--c-muted); }
+
+.nv-card--site { left: 74%; top: 50%; width: 440px; translate: -50% -50%; overflow: hidden; border-radius: 18px; animation-delay: -1s; }
+.nv-card__bar { display: flex; align-items: center; gap: 6px; height: 30px; padding-inline: 14px; background: #f4f4f2; border-bottom: 1px solid var(--c-line-soft); }
+.nv-card__bar i { width: 8px; height: 8px; border-radius: 50%; background: #d6d6d3; }
+.nv-card__bar b { margin-left: 10px; font-size: .68rem; font-weight: 400; color: var(--c-muted); }
+.nv-card__body { display: grid; gap: 10px; padding: 28px 28px 30px; }
+.nv-line { display: block; height: 10px; border-radius: 6px; background: #ececea; }
+.nv-line--kicker { width: 28%; height: 6px; background: rgba(var(--c-gold-rgb), .35); }
+.nv-line--title { width: 82%; height: 20px; background: #16161a; }
+.nv-line--accent { width: 58%; background: var(--c-gold); }
+.nv-line--text { width: 70%; margin-top: 4px; }
+.nv-pill { justify-self: start; margin-top: 6px; padding: 8px 16px; border-radius: 999px; background: var(--c-gold); color: #fff; font-size: .72rem; font-weight: 500; }
+.nv-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
+.nv-tiles i { height: 62px; border-radius: 10px; background: linear-gradient(160deg, #f3f4ff, #eceef8); border: 1px solid rgba(var(--c-gold-rgb), .1); }
+
+.nv-card--score { left: calc(74% + 170px); top: calc(50% - 205px); display: flex; align-items: center; gap: 12px; padding: 12px 18px 12px 12px; animation-delay: -3s; }
+.nv-card--score svg { width: 44px; height: 44px; rotate: -90deg; }
+.nv-card--score circle { fill: none; stroke: #ececea; stroke-width: 4; }
+.nv-card--score .nv-ring { stroke: var(--c-gold); stroke-linecap: round; stroke-dasharray: 113; stroke-dashoffset: 3; }
+.nv-card--score b { font-size: 1.25rem; line-height: 1.1; }
+
+.nv-card--ship { left: calc(74% - 280px); top: calc(50% + 150px); display: flex; align-items: center; gap: 12px; padding: 12px 18px 12px 12px; animation-delay: -5s; }
+.nv-check { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: #e7f7ef; color: #1c8a55; font-weight: 700; }
+
+.nv-card--legal { left: calc(74% + 150px); top: calc(50% + 175px); padding: 12px 18px; animation-delay: -2s; }
+.nv-card--legal b { color: var(--c-gold); }
+
+@keyframes nv-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.reduce .nv-card { animation: none; }
+@media (prefers-reduced-motion: reduce) { .nv-card { animation: none; } }
+
+/* Tablette / téléphone : la composition passe au-dessus du texte, plus petite */
+@media not all and (min-width: 900px), (orientation: portrait) and (max-width: 899px) {
+  .nv-visual { top: var(--header-h); bottom: auto; height: 34svh; }
+  .nv-visual__grid { -webkit-mask-image: radial-gradient(60% 60% at 50% 50%, #000 30%, transparent 75%); mask-image: radial-gradient(60% 60% at 50% 50%, #000 30%, transparent 75%); }
+  .nv-visual__glow { left: 50%; width: 360px; height: 360px; }
+  .nv-card--site { left: 50%; top: 46%; width: min(66vw, 280px); }
+  .nv-card__bar { height: 24px; }
+  .nv-card__body { padding: 14px 16px 16px; gap: 6px; }
+  .nv-line--title { height: 12px; }
+  .nv-pill { padding: 6px 12px; font-size: .65rem; }
+  .nv-tiles { display: none; }
+  .nv-card--score { left: auto; right: 4vw; top: 4%; transform-origin: right top; scale: .78; }
+  .nv-card--ship { left: 3vw; top: auto; bottom: 0; scale: .74; transform-origin: left bottom; }
+  .nv-card--legal { display: none; }
+}
+@media (max-width: 599px) {
+  .nv-card--ship { display: none; }
+  .nv-visual { height: 30svh; }
+}
