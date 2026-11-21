@@ -106,3 +106,4 @@
 .kinetic__kicker, .field__error, .form__status { color: #b23a30; }
 .pv-serp__title { color: #1a4fb5; }
 .choice--opt input:checked + .choice__body:before { color: #1a140c; }
+.hero__hint { background: rgba(255, 253, 249, .92); }
