@@ -1,0 +1,108 @@
+/* ============================================================
+   Novanthic Digital Company : couche de marque et thème clair.
+   Chargée après main-*.css sur toutes les pages : elle redéfinit
+   les couleurs (variables) et corrige les rares teintes sombres
+   écrites en dur dans la feuille compilée.
+   ============================================================ */
+
+:root {
+  /* Fonds : ivoire chaud, comme l'ambiance « Lin clair » de l'Atelier */
+  --c-void: #f6f1e8;
+  --c-ink-0: #f1ebe0;
+  --c-ink-1: #fffdf9;
+  --c-ink-2: #ece4d6;
+  /* Filets et bordures */
+  --c-line: rgba(140, 105, 50, .28);
+  --c-line-soft: rgba(40, 32, 20, .11);
+  /* Texte */
+  --c-text: #1e1b17;
+  --c-muted: #665e53;
+  /* Or approfondi pour rester lisible sur fond clair */
+  --c-gold: #9a7034;
+  --c-gold-rgb: 154, 112, 52;
+  --c-gold-deep: #7d5a27;
+  --c-gold-dim: #d9c6a3;
+  --c-gold-btn: #c49a5a;
+  --glow-gold: 0 0 0 1px rgba(var(--c-gold-rgb), .35), 0 0 40px -10px rgba(var(--c-gold-rgb), .35);
+  --shadow-card: 0 30px 70px -45px rgba(70, 50, 20, .35);
+}
+
+::selection { background: rgba(var(--c-gold-rgb), .25); color: var(--c-text); }
+.skip-link { color: var(--c-void); }
+
+/* Boutons : or plus lumineux en fond, texte encre */
+.btn--primary { background: var(--c-gold-btn); color: #1a140c; }
+.btn--ghost { background: rgba(255, 255, 255, .5); }
+.link:hover { color: var(--c-gold-deep); }
+.sticky-cta { background: var(--c-gold-btn); color: #1a140c; }
+
+/* Ombres adoucies (elles étaient pensées pour un fond noir) */
+.kinetic { box-shadow: none; }
+.pv-frame { box-shadow: 0 40px 90px -45px rgba(70, 50, 20, .45), 0 0 0 1px var(--c-line-soft); }
+.demo { box-shadow: 0 50px 100px -50px rgba(70, 50, 20, .45), 0 0 0 1px var(--c-line-soft); }
+.nova-show__browser { box-shadow: 0 50px 100px -50px rgba(70, 50, 20, .45), 0 0 0 1px var(--c-line-soft); }
+.nova-show__phone { box-shadow: 0 40px 80px -40px rgba(70, 50, 20, .45), 0 0 0 1px var(--c-line-soft); }
+.pv__cookie { box-shadow: 0 1em 2em -1em rgba(0, 0, 0, .35); }
+@media (hover: hover) {
+  .wcard:hover .wcard__media { box-shadow: 0 40px 80px -45px rgba(70, 50, 20, .45), 0 0 40px -14px rgba(var(--c-gold-rgb), .3); }
+}
+
+/* Bandeau cookies */
+.consent { background: rgba(255, 253, 249, .97); box-shadow: 0 30px 80px -30px rgba(70, 50, 20, .4); }
+
+/* Champs et cases */
+.input:hover { border-color: rgba(40, 32, 20, .25); }
+.check input { border-color: rgba(40, 32, 20, .3); }
+.check input:checked:after, .check input:after { border-color: #1a140c; }
+.choice--opt .choice__body:before { border-color: rgba(40, 32, 20, .3); }
+.choice__swatch { box-shadow: inset 0 0 0 1px rgba(40, 32, 20, .15); }
+.choice--opt input:checked + .choice__body:before { color: #fff; }
+
+/* Panier final */
+.hoop__net { stroke: rgba(30, 27, 23, .45); }
+.hoop__ball { filter: drop-shadow(0 10px 12px rgba(70, 50, 20, .35)); }
+
+/* ---------- Logo : NOVANTHIC + « Digital Company » ---------- */
+.logo__num {
+  font-family: var(--f-text);
+  font-style: normal;
+  font-size: .58rem;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--c-gold);
+}
+@media (max-width: 420px) {
+  .site-header .logo__num { display: none; }
+}
+
+/* ---------- Intro : NOVANTHIC (9 lettres au lieu de 5) ---------- */
+.intro__name { font-size: clamp(2.4rem, 9.5vw, 7.5rem); letter-spacing: .12em; margin-right: -.12em; }
+.intro__name span:nth-child(1) { --dx: -.32em; --i: 0; }
+.intro__name span:nth-child(2) { --dx: -.24em; --i: 1; }
+.intro__name span:nth-child(3) { --dx: -.16em; --i: 2; }
+.intro__name span:nth-child(4) { --dx: -.08em; --i: 3; }
+.intro__name span:nth-child(5) { --dx: 0em;    --i: 4; }
+.intro__name span:nth-child(6) { --dx: .08em;  --i: 5; }
+.intro__name span:nth-child(7) { --dx: .16em;  --i: 6; }
+.intro__name span:nth-child(8) { --dx: .24em;  --i: 7; }
+.intro__name span:nth-child(9) { --dx: .32em;  --i: 8; }
+.intro__sub b { font-size: 1.05rem; }
+
+/* ---------- Éléments fixes : verre clair au lieu de verre noir ---------- */
+.site-header.is-scrolled { background: rgba(246, 241, 232, .9); }
+.sound-toggle { background: rgba(255, 253, 249, .92); color: var(--c-text); }
+.site-header .sound-toggle { background: transparent; }
+.egg-toast { background: rgba(255, 253, 249, .97); color: var(--c-text); }
+.tag { background: rgba(255, 255, 255, .55); }
+.pv-frame__bar { background: #e6dfd2; }
+.pv-frame__bar i { background: #cbc2b3; }
+.pv-frame__bar b { color: #6f675b; }
+.logo--lg .logo__num { font-size: .62rem; }
+
+/* Textes secondaires écrits en clair dans la feuille compilée */
+.hero__lead { color: var(--c-muted); font-weight: 350; }
+.legal p { color: #3d3830; }
+.kinetic__kicker, .field__error, .form__status { color: #b23a30; }
+.pv-serp__title { color: #1a4fb5; }
+.choice--opt input:checked + .choice__body:before { color: #1a140c; }
